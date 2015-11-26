@@ -1,0 +1,35 @@
+<div class="profile">
+  <a href="/" class="link-unstyled">
+    <img src="/images/profile.jpg" alt="profile_image" class="img-circle" style="width: 60px;">
+    <h3>Young Rok Kim</h3>
+  </a>
+  <p>
+    Android/iOS Developer<br>
+  </p>
+</div>
+
+<hr>
+
+<ul class="nav nav-pills nav-stacked">
+  {% for node in site.pages %}
+    {% if node.navigation %}
+      {% if page.url == node.url or page.category == node.title %}
+        <li class="active"><a href="{{node.permalink}}" class="active">{{node.navigation}}</a></li>
+      {% else %}
+        <li><a href="{{node.url}}">{{node.navigation}}</a></li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<hr>
+
+<ul class="list-unstyled small">
+  <li>
+    <a href="mailto:rok0810@gmail.com" class="link-unstyled">
+      <i class="fa fa-envelope"></i> rok0810@gmail.com
+    </a>
+  </li>
+</ul>
+
+<hr>
