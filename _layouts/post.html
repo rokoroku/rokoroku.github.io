@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+<!-- 
 {% if page.image.feature %}
 <div class="post-image-feature">
   <img class="feature-image" src=
@@ -15,27 +15,35 @@ layout: default
   {% if page.image.credit %}
   <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
   {% endif %}
-</div><!-- /.image-wrap -->
+</div>
 {% endif %}
-
-<div class="container">
-  <div id="post">
+ -->
+<section class="post">
     <header class="post-header">
-      <h2 title="{{ page.title }}">{{ page.title }}</h2>
-      <span class="post-meta">
+        <h4 title="{{ page.title }}">
+          <a href="javascript:history.back();">
+            <i class="fa fa-angle-left"></i>            
+          </a>&nbsp;
+          {{ page.title }}
+        </h4>
+      <p class="post-meta">
         <span class="post-date">
           {{ page.date | date: "%-d %b %Y" | upcase }}
         </span>
-        •
-        {% include read_time.html %}
-      </span>
+          •
+          {% for cat in page.categories %}
+          <!-- <a class="post-cat" href="{{ site.url }}/categories/#{{ cat }}">{{ cat }}</a> -->
+          <a class="post-cat" href="#">{{ cat }}</a>
+          {% endfor %}
+          • 
+          {% include read_time.html %}
+      </p>
 
     </header>
 
     <article class="post-content">
       {{ content }}
     </article>
-  </div>
 
 <!--   
 <div class="share-buttons">
@@ -64,4 +72,5 @@ layout: default
   <div id="disqus_thread"></div>
   {% include disqus.html %}
   {% endif %}
-</div>
+
+</section>

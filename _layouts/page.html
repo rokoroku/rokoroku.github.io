@@ -2,10 +2,19 @@
 layout: default
 ---
 
-<div class="container">
+<section>
   <div id="page">
     <header class="page-header">
-      <h2>{{ page.title }}</h2>
+      <h4>
+      <a href="javascript:history.back();">
+        <i class="fa fa-angle-left"></i>            
+      </a>&nbsp;
+      {% if page.pageTitle != nil %}
+        {{ page.pageTitle }}
+      {% else %}
+        {{ page.title }}
+      {% endif %}
+      </h4>
     </header>
 
     <article class="page-content">
@@ -21,4 +30,4 @@ layout: default
   {% include disqus.html %}
   {% endif %}
 
-</div>
+</section>

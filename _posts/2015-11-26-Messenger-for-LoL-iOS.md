@@ -1,16 +1,21 @@
 ---
 layout: post
-title: "Messenger for LoL (iOS)"
-date:   2015-11-26 15:00:19
-tags: [iOS, Messenger for LoL] # tags.
-categories: [Application] # categories.
+title: Messenger for LoL (iOS)
+date: 2015-11-26 12:00:00
+tags: [iOS, Messenger for LoL]
+categories: [Application]
 comments: false
+excerpt: "Messenger for League of Legends, iOS Version"
 image:
-  device: lol-messenger-ios-feature.png 
+  feature: lol-messenger-ios-mockup.png 
 ---
-Messenger for LoL, for iOS is about to launch.
 
-![On-device image]({{ site.url }}/img/lol-messenger-ios-screenshot-1.png)
-![Screenshot]({{ site.url }}/img/lol-messenger-ios-screenshot-2.jpg)
+![Screenshot1]({{ site.url }}/img/lol-messenger-ios-screenshot-1.jpg)
+![Screenshot2]({{ site.url }}/img/lol-messenger-ios-screenshot-2.png)
+![Screenshot3]({{ site.url }}/img/lol-messenger-ios-screenshot-3.jpg)
+![Screenshot4]({{ site.url }}/img/lol-messenger-ios-screenshot-4.jpg)
 
-<!-- excerpt: "Custom written post descriptions are the way to go... if you're not lazy." # without setting this option, jekyll will take the first 160 words to be its  excerpt part. -->
+* Built on top of Swift 2.1
+* Manipulate XMPP messaging protocol with [XMPPFramework](https://github.com/robbiehanson/XMPPFramework) 
+* Use [Riot Games API](https://developer.riotgames.com) and [Data Dragon](http://ddragon.leagueoflegends.com/tool/) for static game data
+* Will be available on the App Store, soon.

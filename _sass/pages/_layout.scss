@@ -47,7 +47,7 @@
     font-size: 0.8em;
     font-weight: 700;
     /*text-transform: uppercase;*/
-    margin: -10px auto 20px;
+    margin: -7.5px auto 20px;
     @include text-shadow;
   }
   .author_bio {
@@ -66,7 +66,7 @@
     li {
       list-style: none;
       display: inline-block;
-      margin-left: 1em;
+      margin-left: 0.25em;
       a.social-link-item {
         color: $secondary;
         &:hover,
@@ -81,6 +81,9 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  .nav-post-item {
+    zoom: 1;
+  }
   .nav-item {
     display: inline-block;
     *display: inline;

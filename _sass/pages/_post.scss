@@ -6,11 +6,37 @@
   z-index: 233;
   width: 100%;
   padding: 50px 50px 0;
+  clear: both;
+
   @include media-query($medium-screen) {
     height: 100vh;
     overflow-y: scroll;
     position: initial;
     top: 0;
+  }
+
+  .post {
+    overflow: auto;
+    margin-bottom: 20px;
+  }
+
+  .post-feature-image-list {
+    display: block;
+    float: left;
+    clear: both;
+    margin-right: 20px;
+    img {
+      max-height: 140px;
+    }
+  }
+
+  a.link-unstyled, a.link-unstyled:hover, a.link-unstyled:visited {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  a.link-hover-bg:hover {
+    background-color: #eee;
   }
 }
 
@@ -26,6 +52,15 @@
 // Post Section
 section.post {
 	margin-bottom: 80px;
+  overflow:auto; 
+  img {
+      width: 360px;
+      height: auto;
+      @include media-query($small-screen) {
+        width: 180px;
+        height: auto;
+      }
+    }
 }
 
 // Post title
@@ -60,18 +95,17 @@ section.post {
 }
 
 // Post content
-
 #post {
   padding-bottom: 50px;
   .post-header {
-    margin: 50px auto;
+    //margin: 50px auto;
   }
 }
 
 #page {
   padding-bottom: 50px;
   .page-header {
-    margin: 50px auto;
+    //margin: 50px auto;
   }
 }
 
