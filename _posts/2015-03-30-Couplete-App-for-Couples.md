@@ -16,9 +16,9 @@ image:
 ![Screenshot4]({{ site.url }}/img/couplete-screenshot-4.png)
 <!-- ![Screenshot5]({{ site.url }}/img/couplete-screenshot-5.png) -->
 
-###### Couplete 2.0 Project, Main Android Developer
+###### Attended to Couplete 2.0 Project as Android Developer
 * Redesign UX inspired from Facebook with highly interactive custom UI components
-* Message handling is implemented via MQTT <-> GCM handoff service.
+* Implement Messaging via MQTT <-> GCM handoff service.
 * Use Amazon EC2 and S3 Client for API and storage service.
 
 
