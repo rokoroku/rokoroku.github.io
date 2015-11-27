@@ -10,10 +10,7 @@ image:
   feature: party-recruit-mockup.png 
 ---
 
-![Screenshot1]({{ site.url }}/img/party-recruit-screenshot-1.png)
-![Screenshot2]({{ site.url }}/img/party-recruit-screenshot-2.png)
-![Screenshot3]({{ site.url }}/img/party-recruit-screenshot-3.png)
-![Screenshot4]({{ site.url }}/img/party-recruit-screenshot-4.png)
+![Screenshot]({{ site.url }}/img/party-recruit-mockup.png){: .feature-image }
 
 ###### Location-based Instant Event Planning SNS.
 

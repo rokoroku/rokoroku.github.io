@@ -11,7 +11,7 @@ description: Works
 # Then, the 'url' is: http://yourname.github.io
 # If your project is placed in another repository as a gh-pages branch, like: https://github.com/yourname/projectname
 # Then, the 'url' is: http://yourname.github.io/projectname
-url: http://rokoroku.github.io
+# url: http://rokoroku.github.io
 
 #
 ###################################
@@ -37,7 +37,7 @@ kramdown:
 owner:
   name: Young Rok Kim
   avatar: avatar.jpg
-  job: "Android / iOS Developer"
+  job: Android/iOS Developer
   bio: ""
   email: rok0810@gmail.com
   disqus-shortname: rokoroku
