@@ -20,14 +20,16 @@
     margin-bottom: 20px;
   }
 
-  .post-feature-image-list {
+  .post-feature-image-thumb {
     display: block;
     float: left;
     clear: both;
     margin-right: 20px;
-    img {
-      padding: 10px 10px 10px 10px auto;
-      max-height: 140px;
+    padding: 10px 10px 10px 10px auto;
+    max-height: 80px;  
+
+    @include media-query($medium-screen) {
+      max-height: 140px;  
     }
   }
 

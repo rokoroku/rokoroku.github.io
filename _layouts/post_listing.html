@@ -6,15 +6,13 @@ layout: two-col
 <div class="post">
 
   {% if post.image.feature %}
-  <div class="post-feature-image-list">
-    <img src = 
+    <img class="post-feature-image-thumb" src = 
     {% if post.image.feature contains 'http' %}
     "{{ post.image.feature }}"
     {% else %}
     "{{ site.url }}/img/{{ post.image.feature }}"
     {% endif %} 
     alt="{{ post.title }} feature image">
-  </div>
   {% endif %}
 
   <div class="post-content">
