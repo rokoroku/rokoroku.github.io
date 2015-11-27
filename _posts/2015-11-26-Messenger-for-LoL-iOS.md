@@ -4,7 +4,7 @@ title: Messenger for LoL (iOS)
 date: 2015-11-26 12:00:00
 tags: [iOS, Messenger, LoL]
 categories: [Application]
-comments: false
+comments: true
 excerpt: "Mobile chat client for League of Legends, iOS"
 image:
   feature: lol-messenger-ios-mockup.png 
@@ -17,4 +17,6 @@ image:
 
 * Will be available on the iTunes App Store, soon.
 * Manipulate XMPP messaging protocol with [XMPPFramework](https://github.com/robbiehanson/XMPPFramework) 
-* Use [Riot Games API](https://developer.riotgames.com) and [Data Dragon](http://ddragon.leagueoflegends.com/tool/) for static game data
+* Use [Riot Games API](https://developer.riotgames.com) and [Data Dragon Interface](http://ddragon.leagueoflegends.com/tool/) for static data
+
+League of Legends is trademarks or registered trademarks of [© Riot Games Inc.](http://www.riotgames.com)

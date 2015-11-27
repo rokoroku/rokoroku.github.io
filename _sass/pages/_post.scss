@@ -58,8 +58,8 @@ section.post {
       width: 360px;
       height: auto;
       @include media-query($small-screen) {
-        width: 180px;
-        height: auto;
+        width: auto;
+        height: 280px;
       }
     }
 }

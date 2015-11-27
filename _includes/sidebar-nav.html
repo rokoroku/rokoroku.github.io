@@ -28,8 +28,15 @@
         {% endif %}
         {% endunless %}
         <li class="nav-post-item">
-          <!-- <span>{{ post.date | date: '%b %d'}}</span> -->
-          <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+          <a href="{{ site.url }}{{ post.url }}">
+          {{ post.title }}
+<!--           {% if post.tags contains 'Android' %}
+            <i class="fa fa-android"></i>
+          {% endif %}
+          {% if post.tags contains 'iOS' %}
+            <i class="fa fa-apple"></i>
+          {% endif %} -->
+          </a>
         </li>      
       {% endfor %}
 
