@@ -30,25 +30,28 @@
         <li class="nav-post-item">
           <a href="{{ site.url }}{{ post.url }}">
           {{ post.title }}
-<!--           {% if post.tags contains 'Android' %}
+          <!--           
+          {% if post.tags contains 'Android' %}
             <i class="fa fa-android"></i>
           {% endif %}
           {% if post.tags contains 'iOS' %}
             <i class="fa fa-apple"></i>
-          {% endif %} -->
+          {% endif %} 
+          -->
           </a>
         </li>      
       {% endfor %}
 
       <p/>
-
-      {% for page in site.pages %} {% if page.title %}
+    </ul>
+  </nav>
+    <ul class="page-list">
+        {% for page in site.pages %} {% if page.title %}
       <li class="nav-item">
         <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>{% unless forloop.last %}
         <span>/</span>{% endunless %}
       </li>
       {% endif %} {% endfor %}
     </ul>
-  </nav>
   {% include social-links.html %}
 </div>

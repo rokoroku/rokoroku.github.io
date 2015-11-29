@@ -6,6 +6,7 @@ layout: two-col
 <div class="post">
 
   {% if post.image.feature %}
+  <a class="post-title" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
     <div class="post-feature-image-thumb">
       <img class="resize_fit_center" src = 
       {% if post.image.feature contains 'http' %}
@@ -15,6 +16,7 @@ layout: two-col
       {% endif %} 
       alt="{{ post.title }} feature image">
     </div>
+  </a>
   {% endif %}
 
   <div class="post-content">
