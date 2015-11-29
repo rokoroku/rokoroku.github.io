@@ -45,13 +45,13 @@
       <p/>
     </ul>
   </nav>
-    <ul class="page-list">
-        {% for page in site.pages %} {% if page.title %}
-      <li class="nav-item">
-        <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>{% unless forloop.last %}
-        <span>/</span>{% endunless %}
-      </li>
-      {% endif %} {% endfor %}
-    </ul>
+  <ul class="page-list">
+      {% for page in site.pages %} {% if page.title %}
+    <li class="nav-item">
+      <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>{% unless forloop.last %}
+      <span>/</span>{% endunless %}
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
   {% include social-links.html %}
 </div>
