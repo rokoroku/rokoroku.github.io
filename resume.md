@@ -61,7 +61,7 @@ Served and discharged as Signalman, Sergeant
 <span style="float: right">November 2015</span>
 **Awarded in Startup Weekend Seoul** / Chicken Raider
 
-- Designed and built an mobile service for instant chicken party.
+- Designed and built an mobile service for instant chicken gathering.
 - Implemented lookup system for nearby chicken pub and review platform using Google Maps and Google Places API.
 
 

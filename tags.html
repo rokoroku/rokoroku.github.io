@@ -1,11 +1,12 @@
+<!-- 
 ---
 layout: page
 title: Tags 
 pageTitle: Tag Cloud <i class="fa fa-cloud info-text-color"></i>
 permalink: /tags/
 ---
-
-<ul class="tag-cloud">
+-->
+ <ul class="tag-cloud">
 {% for tag in site.tags %}
   <li style="font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size | plus: 60  }}%">
     <a class="post-tag" href="#{{ tag | first | slugize }}">

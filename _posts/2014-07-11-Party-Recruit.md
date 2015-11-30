@@ -14,7 +14,8 @@ image:
 
 ###### Location-based Instant Event Planning SNS.
 
-* Designed and built a web service similar to party recruitment in online games.
-* Based on [Ruby on Rails](http://rubyonrails.org) framework with [PostgreSQL](http://www.postgresql.org), implemented [Google Maps](https://developers.google.com/maps/) on the top of [Bootstrap](http://getbootstrap.com). 
+* Designed and built a web service similar to party recruitment system in online games.
+* Based on [Ruby on Rails](http://rubyonrails.org) framework with [PostgreSQL](http://www.postgresql.org)
+* Implemented Map-based party with [Google Maps API](https://developers.google.com/maps/) and [Bootstrap](http://getbootstrap.com). 
 * Learned Web MVC pattern with Ruby on Rails framework and cloud platforms with using [Heroku](https://www.heroku.com)
-* [Try it here](http://partyrecruit.herokuapp.com/)
+* Demo available on [here](http://partyrecruit.herokuapp.com/)
