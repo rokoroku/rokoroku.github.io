@@ -15,7 +15,9 @@ image:
 ![Screenshot3]({{ site.url }}/img/lol-messenger-android-screenshot-3.png)
 ![Screenshot4]({{ site.url }}/img/lol-messenger-android-screenshot-4.png)
 
+###### Mobile Chat Client for League of Legends, the popular online game. 
+
 * Available on [Google Play Store](https://play.google.com/store/apps/details?id=com.rokoroku.lolmessengerv2)
 * Manipulate XMPP messaging protocol with [Smack](https://github.com/igniterealtime/Smack) 
 * Use [Riot Games API](https://developer.riotgames.com) and [Data Dragon Interface](http://ddragon.leagueoflegends.com/tool/) for static data
-* Users are based over 20 countries, and supports over 20 languages by contributions
+* Users based over 20 countries, and supports over 20 languages by contributions
