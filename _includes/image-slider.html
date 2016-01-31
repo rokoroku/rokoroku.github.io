@@ -1,0 +1,56 @@
+<link rel="stylesheet"  href="{{ site.url }}/css/magnific-popup.css"/>
+<link rel="stylesheet"  href="{{ site.url }}/css/lightslider.css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{{ site.url }}/js/jquery.magnific-popup.js"></script> 
+<script src="{{ site.url }}/js/lightslider.js"></script> 
+<script>
+	$(document).ready(function() {
+		$('#image-gallery').lightSlider({
+            // gallery:true,
+            item:{{ images.size }},
+            speed:500,
+            auto:false,
+            loop:false,
+            thumbItem: {{ images.size }},
+            responsive: [
+            {
+            	breakpoint: 580,
+            	settings: {
+            		item: 1,
+            		slideMove:1,
+            	}
+            }
+            ],
+            onSliderLoad: function(el) {
+            	el.removeClass('cS-hidden');
+            	el.magnificPopup({
+            		delegate: 'a',
+            		type: 'image',
+            		closeOnContentClick: true,
+            		closeBtnInside: false,
+            		fixedContentPos: true,
+			        mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+			        image: {
+		        	  	verticalFit: true
+			        },
+			        zoom: {
+			         	enabled: true,
+			            duration: 300 // don't foget to change the duration also in CSS
+			        }
+			    });
+            }
+        });
+	});
+</script>
+
+<div class="image-gallery">            
+	<ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+		{% for image in images %}
+		<li data-thumb="{{ site.url }}/img/{{ image }}"> 
+			<a href="{{ site.url }}/img/{{ image }}" data-effect="mfp-zoom-in">
+				<img src="{{ site.url }}/img/{{ image }}"/>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>

@@ -1,4 +1,135 @@
 ---
-layout: post_listing
-permalink: /
+title: Works
+layout: default
 ---
+
+<h1 class="page-heading">Works</h1>
+<br>
+<div class="post-listing">
+	{% for post in site.works reversed  %}
+	{% for cat in post.categories %}
+	{% if cat != "Draft" %}
+	<div class="post">
+
+		{% if post.image.feature %}
+		<a class="post-title" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+			<div class="post-feature-image-thumb">
+				<img class="resize_fit_center" src = 
+				{% if post.image.feature contains 'http' %}
+				"{{ post.image.feature }}"
+				{% else %}
+				"{{ site.url }}/img/{{ post.image.feature }}"
+				{% endif %} 
+				alt="{{ post.title }} feature image">
+			</div>
+		</a>
+		{% endif %}
+
+
+		<div class="post-content">
+			<div class="post-header">
+				<a class="post-title" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+					{{ post.title }}
+				</a>
+
+				{% if post.author %}
+				{% assign author = site.data.authors[post.author] %}
+				{% else %}
+				{% assign author = site.owner %}
+				{% endif %}
+
+				<p class="post-meta">
+					<span class="post-date">
+						<!-- {{ post.date | date: "%-d %b %Y" | upcase }} -->
+						{{ post.date | date: "%Y" | upcase }}
+					</span>
+
+					{% if post.categories.size > 0 %}
+					•
+					{% for cat in post.categories %}
+					<!-- <a class="post-cat" href="{{ site.url }}/categories/#{{ cat }}">{{ cat }}</a> -->
+					<a class="post-cat" href="#">{{ cat }}</a>
+					{% endfor %}
+					{% endif %}
+				</p>
+
+			</div>
+			<div class="post-description">
+				<p>
+					{{ post.excerpt | truncate: 240 }}
+				</p>
+
+			</div>
+		</div>
+	</div>
+	{% endif %}
+	{% endfor %}
+	{% endfor %}
+</div>
+
+
+<br>
+<h3> Draft </h3>
+<br>
+
+<div class="post-listing">
+
+	{% for post in site.works reversed %}
+	{% for cat in post.categories %}
+	{% if cat == "Draft" %}
+	<div class="post">
+
+		{% if post.image.feature %}
+		<a class="post-title" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+			<div class="post-feature-image-thumb">
+				<img class="resize_fit_center" src = 
+				{% if post.image.feature contains 'http' %}
+				"{{ post.image.feature }}"
+				{% else %}
+				"{{ site.url }}/img/{{ post.image.feature }}"
+				{% endif %} 
+				alt="{{ post.title }} feature image">
+			</div>
+		</a>
+		{% endif %}
+
+		<div class="post-content">
+			<div class="post-header">
+				<a class="post-title" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+					{{ post.title }}
+				</a>
+
+				{% if post.author %}
+				{% assign author = site.data.authors[post.author] %}
+				{% else %}
+				{% assign author = site.owner %}
+				{% endif %}
+
+				<p class="post-meta">
+					<span class="post-date">
+						<!-- {{ post.date | date: "%-d %b %Y" | upcase }} -->
+						{{ post.date | date: "%Y" | upcase }}
+					</span>
+
+					{% if post.categories.size > 0 %}
+					•
+					{% for cat in post.categories %}
+					<!-- <a class="post-cat" href="{{ site.url }}/categories/#{{ cat }}">{{ cat }}</a> -->
+					<a class="post-cat" href="#">{{ cat }}</a>
+					{% endfor %}
+					{% endif %}
+				</p>
+
+			</div>
+			<div class="post-description">
+				<p>
+					{{ post.excerpt | truncate: 240 }}
+				</p>
+
+			</div>
+		</div>
+	</div>
+	{% endif %}
+	{% endfor %}
+	{% endfor %}
+</div>

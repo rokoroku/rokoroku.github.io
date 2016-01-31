@@ -1,27 +1,507 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "UTF-8";
+@charset "utf-8";
 
-// Mixins
-@import "components/mixins";
 
-// Variables
-@import "components/variables";
 
-// Reset
-@import "components/normalize";
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
 
-// Components
-@import "components/global";
-@import "components/helpers";
-@import "components/grid";
-@import "components/typography";
-@import "components/buttons";
-@import "components/syntax-highlighting";
+$spacing-unit:     30px;
 
-// Pages styling
-@import "pages/layout";
-@import "pages/tags";
-@import "pages/archive";
-@import "pages/post";
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+/**
+ * Basic styling
+ */
+body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $base-font-weight;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
+
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
+
+
+ //colors
+$white: #ffffff;
+$color_lemon_grass_approx: #999988;
+$color_tamarillo_approx: #a61717;
+$color_swiss_coffee_approx: #e3d2d2;
+$color_mountain_mist_approx: #999999;
+$black: #000000;
+$color_pippin_approx: #ffdddd;
+$color_cornflower_lilac_approx: #ffaaaa;
+$color_bright_red_approx: #aa0000;
+$color_snowy_mint_approx: #ddffdd;
+$color_mint_green_approx: #aaffaa;
+$color_suva_gray_approx: #888888;
+$color_fuscous_gray_approx: #555555;
+$color_seance_approx: #800080;
+$color_east_bay_approx: #445588;
+$color_persian_green_approx: #009999;
+$color_crimson_approx: #d14;
+$teal: #008080;
+$color_bondi_blue_approx: #0086b3;
+$color_red_berry_approx: #990000;
+$navy_blue: #000080;
+$color_pink_swan_approx: #bbbbbb;
+$color_forest_green_approx: #009926;
+$color_flirt_approx: #990073;
+$blue: #0000ff;
+$color_eastern_blue_approx: #2b91af;
+
+.highlight {
+    background: $white;
+    .c {
+        color: $color_lemon_grass_approx;
+        font-style: italic;
+    }
+    .err {
+        color: $color_tamarillo_approx;
+        background-color: $color_swiss_coffee_approx;
+    }
+    .k {
+        font-weight: bold;
+    }
+    .o {
+        font-weight: bold;
+    }
+    .cm {
+        color: $color_lemon_grass_approx;
+        font-style: italic;
+    }
+    .cp {
+        color: $color_mountain_mist_approx;
+        font-weight: bold;
+    }
+    .c1 {
+        color: $color_lemon_grass_approx;
+        font-style: italic;
+    }
+    .cs {
+        color: $color_mountain_mist_approx;
+        font-weight: bold;
+        font-style: italic;
+    }
+    .gd {
+        color: $black;
+        background-color: $color_pippin_approx;
+        .x {
+            color: $black;
+            background-color: $color_cornflower_lilac_approx;
+        }
+    }
+    .ge {
+        font-style: italic;
+    }
+    .gr {
+        color: $color_bright_red_approx;
+    }
+    .gh {
+        color: $color_mountain_mist_approx;
+    }
+    .gi {
+        color: $black;
+        background-color: $color_snowy_mint_approx;
+        .x {
+            color: $black;
+            background-color: $color_mint_green_approx;
+        }
+    }
+    .go {
+        color: $color_suva_gray_approx;
+    }
+    .gp {
+        color: $color_fuscous_gray_approx;
+    }
+    .gs {
+        font-weight: bold;
+    }
+    .gu {
+        color: $color_seance_approx;
+        font-weight: bold;
+    }
+    .gt {
+        color: $color_bright_red_approx;
+    }
+    .kc {
+        font-weight: bold;
+    }
+    .kd {
+        font-weight: bold;
+    }
+    .kn {
+        font-weight: bold;
+    }
+    .kp {
+        font-weight: bold;
+    }
+    .kr {
+        font-weight: bold;
+    }
+    .kt {
+        color: $color_east_bay_approx;
+        font-weight: bold;
+    }
+    .m {
+        color: $color_persian_green_approx;
+    }
+    .s {
+        color: $color_crimson_approx;
+    }
+    .na {
+        color: $teal;
+    }
+    .nb {
+        color: $color_bondi_blue_approx;
+    }
+    .nc {
+        color: $color_east_bay_approx;
+        font-weight: bold;
+    }
+    .no {
+        color: $teal;
+    }
+    .ni {
+        color: $color_seance_approx;
+    }
+    .ne {
+        color: $color_red_berry_approx;
+        font-weight: bold;
+    }
+    .nf {
+        color: $color_red_berry_approx;
+        font-weight: bold;
+    }
+    .nn {
+        color: $color_fuscous_gray_approx;
+    }
+    .nt {
+        color: $navy_blue;
+    }
+    .nv {
+        color: $teal;
+    }
+    .ow {
+        font-weight: bold;
+    }
+    .w {
+        color: $color_pink_swan_approx;
+    }
+    .mf {
+        color: $color_persian_green_approx;
+    }
+    .mh {
+        color: $color_persian_green_approx;
+    }
+    .mi {
+        color: $color_persian_green_approx;
+    }
+    .mo {
+        color: $color_persian_green_approx;
+    }
+    .sb {
+        color: $color_crimson_approx;
+    }
+    .sc {
+        color: $color_crimson_approx;
+    }
+    .sd {
+        color: $color_crimson_approx;
+    }
+    .s2 {
+        color: $color_crimson_approx;
+    }
+    .se {
+        color: $color_crimson_approx;
+    }
+    .sh {
+        color: $color_crimson_approx;
+    }
+    .si {
+        color: $color_crimson_approx;
+    }
+    .sx {
+        color: $color_crimson_approx;
+    }
+    .sr {
+        color: $color_forest_green_approx;
+    }
+    .s1 {
+        color: $color_crimson_approx;
+    }
+    .ss {
+        color: $color_flirt_approx;
+    }
+    .bp {
+        color: $color_mountain_mist_approx;
+    }
+    .vc {
+        color: $teal;
+    }
+    .vg {
+        color: $teal;
+    }
+    .vi {
+        color: $teal;
+    }
+    .il {
+        color: $color_persian_green_approx;
+    }
+}
+.type-csharp .highlight {
+    .k {
+        color: $blue;
+    }
+    .kt {
+        color: $blue;
+    }
+    .nf {
+        color: $black;
+        font-weight: normal;
+    }
+    .nc {
+        color: $color_eastern_blue_approx;
+    }
+    .nn {
+        color: $black;
+    }
+    .s {
+        color: $color_tamarillo_approx;
+    }
+    .sc {
+        color: $color_tamarillo_approx;
+    }
+} 

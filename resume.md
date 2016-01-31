@@ -6,12 +6,12 @@ navigation: Resume
 ---
 
 # Young Rok Kim
-109, Pangyoyeok-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea   
-rok0810@gmail.com
+156, Yeongtong-ro 200beon-gil, Yeongtong-gu, Gyeonggi-do, Suwon-si, Korea
+
 
 <br>
 
-##### EDUCATION
+#### EDUCATION
 
 **Ajou University, Suwon, Korea** <span style="float: right">February 2015</span>
 
@@ -29,7 +29,7 @@ rok0810@gmail.com
    
 <br>
 
-##### WORK EXPERIENCES
+#### WORK EXPERIENCES
 
 <span style="float: right">December 2014 – April 2015</span>
 **Wonderabbit Inc.**  
@@ -48,7 +48,7 @@ Served and discharged as Signalman, Sergeant
 
 <br>
 
-##### AWARDS AND HONORS
+#### AWARDS AND HONORS
 
 
 <span style="float: right">April 2015</span>
@@ -67,7 +67,7 @@ Served and discharged as Signalman, Sergeant
 
 <br>
 
-##### SKILLS AND ABILITIES
+#### SKILLS AND ABILITIES
 
 - Programming Language:
 

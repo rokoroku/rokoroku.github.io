@@ -1,0 +1,33 @@
+{% if page.author %} {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %} {% endif %}
+
+<header>
+
+<!--     <h1>{{ site.title }}</h1> -->
+  <h1 title="{{ page.title }}">
+    {{ page.title }}
+  </h1>
+    <h3><a href="javascript:history.back();">
+      <i class="fa fa-angle-left"></i>            
+      Back
+    </h3>
+<!-- 
+  <img src="{{ site.url }}/img/{{ author.avatar }}" alt="" class="avatar">
+  <span class="author_name">{{ author.name }}</span>
+  <span class="author_job">{{ author.job }}</span>
+  <span class="author_bio mbm">{{ author.bio }}</span>
+ -->
+
+<!-- 	<p class="view">
+	<a href="http://github.com/orderedlist/minimal">View the Project on GitHub <small>orderedlist/minimal</small></a></p>
+ -->
+
+  <!-- <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a> -->
+
+
+<!--     <ul>
+      <li><a href="https://github.com/orderedlist/minimal/zipball/master">Download <strong>ZIP File</strong></a></li>
+      <li><a href="https://github.com/orderedlist/minimal/tarball/master">Download <strong>TAR Ball</strong></a></li>
+      <li><a href="http://github.com/orderedlist/minimal">Fork On <strong>GitHub</strong></a></li>
+    </ul>
+ -->
+ </header>
