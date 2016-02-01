@@ -22,4 +22,9 @@ layout: default
     {{ content }}
   </div>
 
+  {% if site.owner.disqus-shortname and page.comments == true %} 
+  <div id="disqus_thread" class="post-comment"></div> 
+  {% include disqus.html %} 
+  {% endif %}  
+
 </article>
