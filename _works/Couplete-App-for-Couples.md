@@ -9,13 +9,14 @@ excerpt: "Life-logging service for Couples providing chat, album, calendar, love
 image:
   icon: couplete-appicon.png
   feature: couplete-appicon.png 
-  screenshots: ["couplete-screenshot-1.png", "couplete-screenshot-2.png", "couplete-screenshot-3.png", "couplete-screenshot-4.png"]
+  screenshots: ["couplete-screenshot-1.png", "couplete-screenshot-2.png", "couplete-screenshot-3.png", "couplete-screenshot-4.png", "couplete-screenshot-5.png", "couplete-screenshot-6.png", "couplete-screenshot-7.png"]
 ---
 
 #### Attended to Couplete 2.0 Project as Android Developer
-* Redesign UX inspired from Facebook with highly interactive custom UI components
-* Implement Messaging via MQTT <-> GCM handoff service.
-* Use Amazon EC2 and S3 Client for API and storage service.
+* Designed an app containing album, messenger, calendar and other useful features for couples.
+* Highly inspired from Facebook UI/UX with interactive custom UI components.
+* Manipulate MQTT messaging protocol for push service, and Amazon S3 service for data storing.
+* Managed and reduced application issue using Crashlytics service, and tracked user and event flow using Google Analytics and Flurry service.
 
 
 Couplete is trademarks or registered trademarks of [© Wonderabbit Inc.](http://wonderabbit.com)

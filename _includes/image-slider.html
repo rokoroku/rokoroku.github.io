@@ -1,3 +1,7 @@
+{% if images.size > 3 %}{% assign items = 4 %}
+{% else %}{% assign items = images.size %}
+{% endif %}
+
 <link rel="stylesheet"  href="{{ site.url }}/css/magnific-popup.css"/>
 <link rel="stylesheet"  href="{{ site.url }}/css/lightslider.css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -7,11 +11,12 @@
 	$(document).ready(function() {
 		$('#image-gallery').lightSlider({
             // gallery:true,
-            item:{{ images.size }},
-            speed:500,
-            auto:false,
+            item:{{ items }},
+            speed:1000,
+            auto:true,
             loop:false,
-            thumbItem: {{ images.size }},
+            controls:false,
+            thumbItem: {{ items }},
             responsive: [
             {
             	breakpoint: 580,

@@ -4,7 +4,14 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <p class="post-meta">
+	<!-- time -->
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+    <!-- catgory -->
+	{% if page.categories.size > 0 %} • {% for cat in page.categories %}<a class="post-cat" href="#">{{ cat }}</a>{% endfor %}{% endif %}
+	<!-- author -->
+    {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+    </p>
 
     {% if page.image.screenshots.size > 0 %}
     	{% assign images = page.image.screenshots %}

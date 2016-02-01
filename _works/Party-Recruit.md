@@ -5,7 +5,7 @@ date: 2014-07-11 12:00:00
 tags: [Web, Ruby on Rails, Location Based, SNS]
 categories: [Draft]
 comments: true
-excerpt: "Location-based SNS inspired from party system in online games"
+excerpt: "Location-based SNS inspired from party recruiting system in online games"
 image:
   feature: party-recruit-mockup.png 
 ---
