@@ -8,7 +8,7 @@
 # Site settings
 title: Young Rok Kim
 email: rok0810@gmail.com
-description: "SW Developer, Mobile Enthusiast. "
+description: "Software Engineer, Mobile Enthusiast."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 twitter_username: rokoroku1
@@ -30,8 +30,8 @@ collections:
 owner:
   name: Young Rok Kim
   avatar: avatar.jpg
-  job: "iOS/Android Developer."
-  bio: "Software Engineer, Mobile Enthusiast."
+  job: "Software Engineer at <a href=\"https://github.com/sini-company\" target=\"_blank\">@sinicompany</a>"
+  bio: "A software guru wannabe"
   email: rok0810@gmail.com
   disqus-shortname: "rokoroku"
   twitter: #username
