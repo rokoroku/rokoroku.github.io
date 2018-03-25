@@ -6,8 +6,6 @@ navigation: Resume
 ---
 
 # Young Rok Kim
-156, Yeongtong-ro 200beon-gil, Yeongtong-gu, Gyeonggi-do, Suwon-si, Korea
-
 
 <br>
 
@@ -138,6 +136,7 @@ Served and discharged as Signalman, Sergeant
   * (Application Database) Realm, MapDB  
 
 - Process / Container management
+
   * nodemon, pm2
   * docker, docker-compose, kubernetes
 
